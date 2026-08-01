@@ -46,5 +46,6 @@ WORKDIR /opt/rebecca
 COPY --from=builder /src/dist/rebecca-server /usr/local/bin/rebecca-server
 COPY --from=builder /src/dist/rebecca-cli /usr/local/bin/rebecca-cli
 COPY templates ./templates
+# Railway پورت رو از طریق متغیر $PORT تزریق می‌کند
 
 ENTRYPOINT ["rebecca-server"]
